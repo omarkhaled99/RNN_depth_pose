@@ -26,10 +26,10 @@ def main():
     threads = args.threads
 
     # read txt file with the train sequence names
-    with open('kitti_test.txt', 'r') as f:
+    with open('/content/RNN_depth_pose/data/KITTI/kitti_train.txt', 'r') as f:
         sequences = f.read().splitlines()
 
-    depth_path = '/playpen1/datasets/KITTI/KITTI_depth/train/'
+    depth_path = '/content/drive/MyDrive/train'
     #with Pool(threads) as pool:
         # create temporary h5 files for each baseline and sequence combination
         # baseline_range_files_dict = {b:[] for b in baseline_ranges}
