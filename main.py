@@ -5,7 +5,7 @@ from RNN_depth_trainer_mtv_occ import *
 
 os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
-
+tf.disable_eager_execution()
 def get_available_gpus():
     """
         Returns a list of the identifiers of all visible GPUs.

@@ -26,10 +26,10 @@ def main():
     threads = args.threads
 
     # read txt file with the train sequence names
-    with open('/content/RNN_depth_pose/data/KITTI/kitti_train.txt', 'r') as f:
+    with open('kitti_test.txt', 'r') as f:
         sequences = f.read().splitlines()
 
-    depth_path = '/content/drive/MyDrive/train'
+    depth_path = '/playpen1/datasets/KITTI/KITTI_depth/train/'
     #with Pool(threads) as pool:
         # create temporary h5 files for each baseline and sequence combination
         # baseline_range_files_dict = {b:[] for b in baseline_ranges}
@@ -44,7 +44,7 @@ def main():
 
         create_samples_from_sequence_kitti(outfile, kitti_path, depth_path, seq_name)
 
-    # print('created', sum(created_groups), 'groups')
+    print('created', sum(created_groups), 'groups')
 
     return 0
 

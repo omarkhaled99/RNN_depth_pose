@@ -664,7 +664,7 @@ class RNN_depth_trainer:
                 saver.restore(sess, tf.train.latest_checkpoint(args.restore_path))
 
             try:
-                step = 0
+                step = 80000
                 while True:
                     start_time = time.time()
                     fetches = {
